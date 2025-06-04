@@ -44,7 +44,7 @@ func decode(file []byte) (decodedData []byte) {
 }
 
 func main() {
-	if len(os.Args) < 2 {
+	if len(os.Args) < 3 {
 		fmt.Println(helpMessage)
 		return
 	}
