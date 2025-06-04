@@ -8,6 +8,8 @@ import (
 	"strings"
 )
 
+const helpMessage = "Usage: [rle-coder decode filename] or [rle-coder decode filename]"
+
 func encode(file []byte) (encodedData []byte) {
 	var sameCount byte = 1
 
@@ -42,6 +44,11 @@ func decode(file []byte) (decodedData []byte) {
 }
 
 func main() {
+	if len(os.Args) < 2 {
+		fmt.Println(helpMessage)
+		return
+	}
+
 	file, err := os.ReadFile(os.Args[2])
 
 	if err != nil {
@@ -58,6 +65,6 @@ func main() {
 		os.WriteFile(fileName, decode(file), os.ModePerm)
 		fmt.Println("Decoded")
 	default:
-		fmt.Println("Usage: rle encode/decode filename")
+		fmt.Println(helpMessage)
 	}
 }
