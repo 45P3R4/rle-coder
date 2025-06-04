@@ -8,4 +8,4 @@ A simple tool for RLE encoding/decoding
 
 or
 
-```rle-coder encode ./filename```
+```rle-coder decode ./filename```
