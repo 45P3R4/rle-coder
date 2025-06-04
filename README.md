@@ -2,8 +2,10 @@
 
 A simple tool for RLE encoding/decoding
 
-## Usega
+## Usage
 
 ```rle-coder encode ./filename```
+
 or
+
 ```rle-coder encode ./filename```
